@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="10">
+      <label>Piaggio Pegna Pc 7</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+      <!--
+      <item>
+        <label>Neutral Position</label>
+        <binding>
+          <command>property-assign</command>
+          <property>sim/model/mode</property>
+          <value> 0 </value>
+        </binding>
+      </item>
+      <item>
+        <label>Water Position</label>
+        <binding>
+          <command>property-assign</command>
+          <property>sim/model/mode</property>
+          <value> 1 </value>
+        </binding>
+      </item>
+      <item>
+        <label>Air Position</label>
+        <binding>
+          <command>property-assign</command>
+          <property>sim/model/mode</property>
+          <value> 2 </value>
+        </binding>
+      </item>
+      <item>
+        <label>Immatriculation</label>
+        <binding>
+          <command>nasal</command>
+          <script>dr400.immat_dialog.toggle()</script>
+        </binding>
+      </item>
+-->
+    </menu>
+  </default>
+
+</PropertyList>

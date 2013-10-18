@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Blohm & Voss BV 141 : 2010 Emmanuel BARANGER
+   
+     sources          : http://en.wikipedia.org/wiki/Piaggio_P.7
+
+     wingspan         :  6.7600 m  (    22 ft 2.00 in )
+     length           :  8.8583 m  (    29 ft 0.75 in )
+     height           :   2.451 m  (     8 ft 0.50 in )
+     empty weight     :    1403 kg (  3093 lb         )
+     max speed        :   600 km/h (   324 kt         )
+     engine           : 1 Isotta-Fraschini V-12 liquid-cooled piston engine (850 hp)
+-->
+<airplane mass="3093" >
+
+  <approach speed="70" aoa="8" fuel="0.2">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  </approach>
+  
+  <cruise speed="300" alt="5000" fuel="0.5">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  </cruise>
+  
+  <cockpit x="-1.70136" y="0" z="0.53148"/>
+
+  <fuselage ax="3.87984" ay="0" az="0.17276" bx="-4.41071" by="0" bz="0.23999" width="0.695" taper="0.4" midpoint="0.4"/>
+
+  <wing x="0.01592" y="0" z="0.39551" 
+        chord="1.858" 
+        length="3.386"
+        taper="0.5" 
+        sweep="-5"
+        camber="0.007">
+        <stall aoa="20" width="4" peak="1.5"/>
+        <flap1  start="0.51" end="1.00" lift="1.1" drag="1.2"/>
+        <control-input split="true" control="FLAP1" axis="/controls/flight/aileron"/>
+        <control-input split="true" control="FLAP1" axis="/controls/flight/aileron-trim"/>
+        <control-output prop="/surface-positions/left-aileron-pos-norm" side="left" control="FLAP1"/>
+        <control-output prop="/surface-positions/right-aileron-pos-norm" side="right" control="FLAP1"/>
+  </wing>
+  
+  <!-- Left Foil
+  <mstab x="1.50289" y="0.56577" z="-1.35511" 
+         chord="0.372" 
+         length="1.05"
+         taper="0.5" 
+         sweep="10"
+         dihedral="20"
+         camber="0.007">
+         <stall aoa="20" width="4" peak="1.5"/>
+  </mstab>
+  -->
+  <!-- Foil rear
+  <mstab x="-2.95903" y="0" z="-0.66605" 
+         chord="0.144" 
+         length="0.340"
+         taper="1" 
+         camber="0.007">
+         <stall aoa="20" width="4" peak="1.5"/>
+  </mstab>
+  -->
+  <hstab x="-3.49116" y="0" z="0.511"  
+         chord="1.387" 
+         length="1.3"
+         taper="0.5"
+         sweep="18">
+         <stall aoa="18" width="4" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+         <control-input control="FLAP0" axis="/controls/flight/elevator"/>
+         <control-input control="FLAP0" axis="/controls/flight/elevator-trim"/> 
+         <control-output prop="/surface-positions/elevator-pos-norm" control="FLAP0"/>
+  </hstab>
+
+  <vstab x="-3.45774" y="0" z="0.38699" 
+         chord="1.930" 
+         length="1.1"
+         sweep="25" 
+         taper="0.4">
+         <stall aoa="14" width="3" peak="1.5"/>
+         <flap0  start="0" end="1" lift="1.6" drag="1.2"/>
+         <control-input control="FLAP0" axis="/controls/flight/rudder" invert="true"/>
+         <control-input control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
+         <control-output prop="/surface-positions/rudder-pos-norm" control="FLAP0" min="1" max="-1"/>
+  </vstab>
+
+<!--  Source           : http://en.wikipedia.org/wiki/Isotta_Fraschini_Asso_XI 
+                         (not good engine but I have no found another yet)
+
+          Engine       : Isotta Fraschini Asso XI
+          Type         : 12-cylinder supercharged water-cooled 60° V-12 piston aircraft engine
+          Power        : 836 hp at 2250 rpm at 4000 m (13120 ft); take off power 880 hp at 2250 rpm
+          weight       : 594 kg ( 1310 lb )
+          Displacement : 32.65 L (1992 in3)
+          Compression  : 6.4:1
+          Gear ratio   : 0.743 or 0.512
+-->
+  <propeller x="1.42785" y="0" z="0" 
+             radius="1.1825"
+             mass="1310" 
+             moment="-50"
+             cruise-speed="300"
+             cruise-alt="5000" 
+             cruise-power="836" 
+             cruise-rpm="2250" 
+	     takeoff-power="880" 
+	     takeoff-rpm="2250"
+             gear-ratio="0.743">
+             <actionpt x="3.97626" y="0" z="0.17276"/>
+             <piston-engine eng-rpm="3000" 
+                            eng-power="890"
+                            displacement="1992" 
+                            compression="6.4"/>
+             <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
+             <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
+             <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
+             <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/>
+  </propeller>
+
+  <!-- Fuselage -->
+  <!-- 0 - Avant -->
+  <gear x="3.20" y="0" z="0.15" 
+        compression="1.2" 
+        spring="15"
+        damp="8"
+        sfric="0.4" 
+        dfric="0.3" 
+        on-water="1" 
+        on-solid="0" 
+        ignored-by-solver="1"
+        reduce-friction-by-extension="1"
+        speed-planing="5" 
+        spring-factor-not-planing="0.2">
+  </gear>
+
+  <!-- 1 - Centrale -->
+  <gear x="0" y="0" z="0.05" 
+        compression="1.4" 
+        spring="6"
+        damp="8"
+        sfric="0.4" 
+        dfric="0.1" 
+        on-water="1" 
+        on-solid="0" 
+        ignored-by-solver="1"
+        reduce-friction-by-extension="1"
+        speed-planing="5" 
+        spring-factor-not-planing="0.3">
+  </gear>
+
+  <!-- 2 - Arriere -->
+  <gear x="-2.40" y="0" z="0.3" 
+        compression="1.1" 
+        spring="3" 
+        damp="8"
+        sfric = "0.4" 
+        dfric = "0.2" 
+        on-water="1" 
+        on-solid="0" 
+        ignored-by-solver="1"
+        reduce-friction-by-extension="1"
+        speed-planing="5" 
+        spring-factor-not-planing="0.9">
+  </gear>
+  
+  <!-- 3 - Left tip wing -->
+  <gear x="0.30" y="3.30" z="0.1" 
+        compression="0.3"
+        spring="0.9" 
+        damp="10"
+        sfric="0.8" 
+        dfric="0.7" 
+        on-water="1" 
+        on-solid="0" 
+        ignored-by-solver="1"
+        reduce-friction-by-extension="1.25"
+        speed-planing="15" 
+        spring-factor-not-planing="0.7">
+  </gear>
+  
+  <!-- 4 - Right tip wing -->
+  <gear x="0.30" y="-3.30" z="0.1" 
+        compression="0.3"
+        spring="0.9" 
+        damp="10"
+        sfric="0.8" 
+        dfric="0.7" 
+        on-water="1" 
+        on-solid="0" 
+        reduce-friction-by-extension="1.25"
+        speed-planing="15" 
+        spring-factor-not-planing="0.7">
+    </gear>
+    
+  <!-- 5 - Gouvernail -->
+  <gear x="-3.93" y="0" z="-0.02"
+        compression="1"
+        spring="8" 
+        sfric="0.9" 
+        dfric="0.8" 
+        on-water="0"
+        on-solid="0"
+        ignored-by-solver="1">
+        <control-input axis="/controls/gear/water-rudder-pos" control="STEER" invert ="true" square="true"/>
+  </gear>
+  
+  <!-- 6 -Foil left -->
+  <gear x="1.50289" y="0.50289" z="-1.15511" 
+        compression="0.2" 
+        on-water="0" 
+        on-solid="1"
+        ignored-by-solver="1">
+    </gear>
+  
+  <!-- 7 -Foil right -->
+  <gear x="1.50289" y="-0.50289" z="-1.15511" 
+        compression="0.2" 
+        on-water="0" 
+        on-solid="1"
+        ignored-by-solver="1">
+    </gear>
+  
+  <!-- 8 -Foil rear -->
+  <gear x="-2.95897" y="0" z="-0.47625" 
+        compression="0.2" 
+        on-water="0" 
+        on-solid="1"
+        ignored-by-solver="1">
+  </gear>
+  
+  <!-- Fuel  -->  
+  <tank x=" 1.3" y="0" z="-0.2" capacity="349" />
+  <tank x="-0.2" y="0" z="-0.2" capacity="349" />
+  <tank x="-1.7" y="0" z="-0.2" capacity="259" />
+
+  <!-- Mass displacment -->
+  <ballast x="0" y="0" z="-1" mass="450" />
+
+</airplane>

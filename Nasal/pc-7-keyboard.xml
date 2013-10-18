@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <key n="100">
+    <name>d</name>
+    <desc>Crew door</desc>
+    <binding>
+      <command>nasal</command>
+      <script>doors.crew.toggle();</script>
+    </binding>
+  </key>
+
+  <key n="119">
+    <name>w</name>
+    <desc>Mode up</desc>
+    <binding>
+      <command>property-adjust</command>
+      <property>sim/model/mode</property>
+      <step>1</step>
+      <min>0</min>
+      <max>2</max>
+    </binding>
+  </key>
+
+  <key n="87">
+    <name>W</name>
+    <desc>Mode down</desc>
+    <binding>
+      <command>property-adjust</command>
+      <property>sim/model/mode</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>2</max>
+    </binding>
+  </key>
+
+</PropertyList>
+
