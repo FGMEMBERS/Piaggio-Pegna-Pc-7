@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>oil.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitre</object-name>
+  </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/engines/engine/oil-temperature-degf</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry> <!--   0 degC -->
+      <entry><ind>  50 </ind><dep>  29 </dep></entry> <!--  10 degC -->
+      <entry><ind>  68 </ind><dep>  56 </dep></entry> <!--  20 degC -->
+      <entry><ind>  86 </ind><dep>  84 </dep></entry> <!--  30 degC -->
+      <entry><ind> 104 </ind><dep> 111 </dep></entry> <!--  40 degC -->
+      <entry><ind> 122 </ind><dep> 136 </dep></entry> <!--  50 degC -->
+      <entry><ind> 140 </ind><dep> 161 </dep></entry> <!--  60 degC -->
+      <entry><ind> 158 </ind><dep> 187 </dep></entry> <!--  70 degC -->
+      <entry><ind> 176 </ind><dep> 214 </dep></entry> <!--  80 degC -->
+      <entry><ind> 194 </ind><dep> 241 </dep></entry> <!--  90 degC -->
+      <entry><ind> 212 </ind><dep> 268 </dep></entry> <!-- 100 degC -->
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

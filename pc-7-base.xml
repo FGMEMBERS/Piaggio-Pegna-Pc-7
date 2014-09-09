@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+ 
+    <description>Piaggio Pegna Pc 7 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>0.1 Alpha</status>
+   
+    <fuel-fraction>0.8</fuel-fraction>
+  
+    <type type="string">seaplane</type>
+  
+    <startup>
+      <splash-texture>Aircraft/Piaggio-Pegna-Pc-7/pc-7-splash.png</splash-texture>
+    </startup>
+  
+    <sound>
+      <path>Aircraft/Piaggio-Pegna-Pc-7/Sounds/pc-7-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Piaggio-Pegna-Pc-7/Models/pc-7.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+      <mode type="int">0</mode>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                      <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                      <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                      <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                      <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
+        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>  
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!-- 2 altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft">  0 </float>               <!-- 3 altitude for trail -->
+        <float n="6" alias="/engines/engine[0]/rpm" />
+        <float n="8" alias="/engines/engine[0]/cranking" />
+        <string n="0" type="string" />
+        <string n="9" type="string" />                                        <!-- string[9] reserved for bombable mode -->
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Piaggio Pegna Pc 7</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
+      <line>                          Schneider Trophy (1929)                        </line>
+      <line>-------------------------------------------------------------------------</line>
+      <line>      Piaggio Pegna-Pc-7                                                 </line>
+      <line>                                                                         </line>
+      <line> Wingspan   : 6.7600 m ( 22 ft 2.00 in )                                 </line>
+      <line> Lenght     : 8.8583 m ( 29 ft 0.75 in )                                 </line>
+      <line> Height     : 2.4510 m (  8 ft 0.50 in )                                 </line>
+      <line> Powerplant : Isotta-Fraschini V-12 liquid-cooled piston engine (850 hp) </line>
+      <line>_________________________________________________________________________</line>
+      <key>
+        <name>w</name>
+        <desc>Mode up</desc>
+      </key>
+      <key>
+        <name>W</name>
+        <desc>Mode down</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/pc-7-menu.xml"/>
+
+  </sim>
+
+  <input>
+    <keyboard include="Nasal/pc-7-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors> 
+      <file>Aircraft/Piaggio-Pegna-Pc-7/Nasal/doors.nas</file>
+    </doors> 
+    <pc7> 
+      <file>Aircraft/Piaggio-Pegna-Pc-7/Nasal/liveries.nas</file>
+    </pc7>
+  </nasal>
+
+</PropertyList>

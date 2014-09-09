@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left engine 1 -->
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.81986 </x-m>
+      <y-m> -0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.64986 </x-m>
+      <y-m> -0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.47986 </x-m>
+      <y-m> -0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.30986 </x-m>
+      <y-m> -0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.13986 </x-m>
+      <y-m> -0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -0.96986 </x-m>
+      <y-m> -0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model> 
+
+  <!-- Right engine 1 -->
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.81986 </x-m>
+      <y-m>  0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.64986 </x-m>
+      <y-m>  0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.47986 </x-m>
+      <y-m>  0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.30986 </x-m>
+      <y-m>  0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.13986 </x-m>
+      <y-m>  0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Piaggio-Pegna-Pc-7/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -0.96986 </x-m>
+      <y-m>  0.12813 </y-m>
+      <z-m>  0.49766 </z-m>
+    </offsets>
+  </model>
+  
+</PropertyList>
